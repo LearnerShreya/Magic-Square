@@ -18,4 +18,4 @@
    - Hover over any cell to see the visual effect, and explore the interactive UI.
 
 4. **View the Ramanujan Magic Square Image:**
-   - Hover over the **Image** link to view the **Ramanujan Magic Square** image.
+   - Click on **Hover For More Patterns** button to view all patterns.
