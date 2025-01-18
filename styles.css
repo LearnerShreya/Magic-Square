@@ -1,74 +1,143 @@
-/* styles.css */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #4a90e2, #9013fe);
-    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    flex-direction: column;
-  }
-  
-  .container {
-    text-align: center;
-    max-width: 600px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  h1 {
+}
+h1 {
+    color: #fff;
+    margin-top: 50px;
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  
-  p {
+}
+.input-container {
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+label {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+input {
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin: 10px;
+    width: 150px;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+input:focus {
+    border-color: #2575fc;
+    outline: none;
+}
+button {
+    padding: 10px 20px;
+    background-color: #2575fc;
+    color: #fff;
     font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .magic-square {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #6a11cb;
+}
+.magic-square {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    border-radius: 10px;
-  }
-  
-  .cell {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 20px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    max-width: 350px;
+    margin: 40px auto;
+    transition: opacity 1s ease-in-out;
+}
+.cell {
+    background-color: #fffbf0;
     color: #333;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, background 0.3s;
-  }
-  
-  .cell:hover {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cell:hover {
     transform: scale(1.1);
-    background: #f39c12;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.sum-display {
+    margin: 20px;
+    font-weight: bold;
     color: #fff;
-  }
-  
-
-  /* Add fade-in animation */
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.pattern-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+.pattern {
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    max-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+}
+.pattern:hover {
+    transform: scale(1.05);
+}
+.pattern h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+    color: #2575fc;
+    text-align: center;
+}
+.sum-badge {
+    background-color: #2575fc;
+    color: #fff;
+    border-radius: 50px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+.row, .column, .diagonal {
+    background-color: #f0f8ff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+.row:hover, .column:hover, .diagonal:hover {
+    transform: scale(1.05);
+}
+/* CSS Animation for Fade-In Effect */
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@media (max-width: 768px) {
+    .input-container {
+        flex-direction: column;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    .magic-square {
+        grid-template-columns: repeat(2, 1fr);
     }
-  }
-  
+}
