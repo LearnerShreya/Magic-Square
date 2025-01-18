@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Ramanujan Magic Square</h1>
+    <h1>Magic Square</h1>
     <div class="input-container">
         <label for="day">Day (DD):</label>
         <input type="number" id="day" min="1" max="31" required>
@@ -21,6 +21,11 @@
     <div id="sumDisplay" class="sum-display"></div>
     <div id="magicSquare" class="magic-square"></div>
     <div id="patternContainer" class="pattern-container"></div>
+
+    <div class="image-container">
+        <button onclick="showImage()">Hover For More Patterns</button>
+        <img id="magicSquareImage" src="./image.png" alt="Ramanujan Magic Square" style="display:none;">
+    </div>
 
     <script src="script.js"></script>
 </body>

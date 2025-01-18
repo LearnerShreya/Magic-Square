@@ -33,7 +33,7 @@ function generateMagicSquare() {
     // Calculate sum of rows, columns, and diagonals
     const sum = magicSquare[0].reduce((a, b) => a + b, 0);
     const sumDisplay = document.getElementById('sumDisplay');
-    sumDisplay.textContent = `Sum of rows, columns, and diagonals: ${sum}`;
+    sumDisplay.textContent = `Sum: ${sum}`;
 
     generatePatterns(magicSquare);
 }
@@ -45,7 +45,7 @@ function generatePatterns(magicSquare) {
     // Rows
     for (let i = 0; i < size; i++) {
         patterns.push({
-            type: 'Row',
+            type: `Row ${i + 1}`,
             values: magicSquare[i],
             sum: magicSquare[i].reduce((a, b) => a + b, 0)
         });
@@ -58,7 +58,7 @@ function generatePatterns(magicSquare) {
             column.push(magicSquare[j][i]);
         }
         patterns.push({
-            type: 'Column',
+            type: `Column ${i + 1}`,
             values: column,
             sum: column.reduce((a, b) => a + b, 0)
         });
@@ -107,4 +107,9 @@ function generatePatterns(magicSquare) {
         patternDiv.appendChild(patternGrid);
         patternContainer.appendChild(patternDiv);
     });
+}
+
+function showImage() {
+    const image = document.getElementById('magicSquareImage');
+    image.style.display = image.style.display === 'none' ? 'block' : 'none';
 }

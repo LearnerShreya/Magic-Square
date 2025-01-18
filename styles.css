@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 h1 {
     color: #fff;
     margin-top: 50px;
@@ -12,18 +13,34 @@ h1 {
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-.input-container {
+
+/* .input-container {
     margin: 40px auto;
     display: flex;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
+} */
+
+.image-container {
+    margin: 30px auto;
+    text-align: center; /* Centers the content horizontally */
 }
+
+#magicSquareImage {
+    max-width: 100%;
+    height: auto;
+    display: inline-block; /* Makes the image an inline block element */
+    margin: 10px auto; /* Centers the image */
+}
+
+
 label {
     color: #fff;
     font-size: 1rem;
     font-weight: 600;
 }
+
 input {
     padding: 10px;
     border: 2px solid #fff;
@@ -34,10 +51,12 @@ input {
     color: #333;
     transition: all 0.3s ease;
 }
+
 input:focus {
     border-color: #2575fc;
     outline: none;
 }
+
 button {
     padding: 10px 20px;
     background-color: #2575fc;
@@ -48,9 +67,11 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 button:hover {
     background-color: #6a11cb;
 }
+
 .magic-square {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -60,6 +81,7 @@ button:hover {
     margin: 40px auto;
     transition: opacity 1s ease-in-out;
 }
+
 .cell {
     background-color: #fffbf0;
     color: #333;
@@ -71,10 +93,12 @@ button:hover {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .cell:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
 .sum-display {
     margin: 20px;
     font-weight: bold;
@@ -82,6 +106,7 @@ button:hover {
     font-size: 1.3rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 .pattern-container {
     display: flex;
     flex-wrap: wrap;
@@ -89,6 +114,7 @@ button:hover {
     justify-content: center;
     padding: 20px;
 }
+
 .pattern {
     border: 2px solid #fff;
     border-radius: 8px;
@@ -99,9 +125,11 @@ button:hover {
     transition: transform 0.3s ease;
     animation: fadeIn 0.5s ease-in-out;
 }
+
 .pattern:hover {
     transform: scale(1.05);
 }
+
 .pattern h3 {
     margin: 0;
     padding-bottom: 10px;
@@ -109,6 +137,7 @@ button:hover {
     color: #2575fc;
     text-align: center;
 }
+
 .sum-badge {
     background-color: #2575fc;
     color: #fff;
@@ -117,6 +146,7 @@ button:hover {
     font-size: 1rem;
     margin-left: 10px;
 }
+
 .row, .column, .diagonal {
     background-color: #f0f8ff;
     padding: 10px;
@@ -125,14 +155,27 @@ button:hover {
     margin-bottom: 15px;
     transition: transform 0.3s ease-in-out;
 }
+
 .row:hover, .column:hover, .diagonal:hover {
     transform: scale(1.05);
 }
+
 /* CSS Animation for Fade-In Effect */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+.image-container {
+    margin: 30px auto;
+}
+
+#magicSquareImage {
+    max-width: 100%;
+    height: auto;
+    display: none;
+}
+
 @media (max-width: 768px) {
     .input-container {
         flex-direction: column;
