@@ -8,8 +8,8 @@ function generateMagicSquare() {
         return;
     }
 
-    const yy = year % 100;
-    const YY = Math.floor(year / 100);
+    const yy = Math.floor(year / 100);
+    const YY = year % 100;
 
     const magicSquare = [
         [day, month, yy, YY],
